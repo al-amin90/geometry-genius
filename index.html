@@ -8,16 +8,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-
+    <header class="w-11/12 mt-5 mx-auto ">
+        <div class="navbar bg-[#108fd838] rounded-md p-4">
+            <div class="navbar-start flex flex-col items-start">
+                <a class="block font-semibold text-3xl">Interactive
+                </a>
+                <p class="block text-xl">Geometry Genius</p>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-[#1090D8] text-white">Blog</a>
+            </div>
+        </div>
     </header>
     <main class="w-11/12 mt-5 mx-auto">
         <!-- main content container -->
-        <div class="flex flex-col gap-4  md:flex-row">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- shape container  -->
-            <div class="flex-1 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex-1 col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Triangle card  -->
-                <div class="card bg-base-100 text-center pt-10 shadow-xl">
+                <div class="card bg-base-100 text-center pt-10 shadow-xl" id="triangle-container">
                     <figure><img class="w-4/6 " src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="text-xl font-bold text-center">Triangle</h2>
@@ -42,7 +51,7 @@
                     </div>
                 </div>
                 <!-- Rectangle card  -->
-                <div class="card bg-base-100 text-center shadow-xl">
+                <div class="card bg-base-100 text-center shadow-xl" id="rectangle-container">
                     <figure><img class="p-7" src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="text-xl font-bold text-center">Rectangle</h2>
@@ -67,7 +76,7 @@
                     </div>
                 </div>
                 <!-- Parallelogram card  -->
-                <div class="card bg-base-100 text-center shadow-xl">
+                <div class="card bg-base-100 text-center shadow-xl" id="parallelogram-container">
                     <figure><img class="p-7" src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="text-xl font-bold text-center">Parallelogram</h2>
@@ -92,7 +101,7 @@
                     </div>
                 </div>
                 <!-- Rhombus card  -->
-                <div class="card bg-base-100 text-center shadow-xl">
+                <div class="card bg-base-100 text-center shadow-xl" id="rhombus-container">
                     <figure><img class="p-7" src="./images/rhombus.png" alt="Shoes" /></figure>
                     <!-- card body  -->
                     <div class="card-body">
@@ -121,7 +130,7 @@
                     </div>
                 </div>
                 <!-- Pentagon card  -->
-                <div class="card bg-base-100 text-center shadow-xl">
+                <div class="card bg-base-100 text-center shadow-xl" id="pentagon-container">
                     <figure><img class="p-7" src="./images/pentagon.png" alt="Shoes" /></figure>
                     <!-- card body  -->
                     <div class="card-body">
@@ -150,7 +159,7 @@
                     </div>
                 </div>
                 <!-- Ellipse card  -->
-                <div class="card bg-base-100 text-center shadow-xl">
+                <div class="card bg-base-100 text-center shadow-xl" id="ellipse-container">
                     <figure><img class="p-7" src="./images/ellipse.png" alt="Shoes" /></figure>
                     <!-- card body  -->
                     <div class="card-body">
@@ -180,8 +189,10 @@
                 </div>
             </div>
             <!-- Area Container  -->
-            <div class="w-72 border-2 border-gray-400 rounded-md">
-                <h3 class="text-xl font-bold text-center p-7">Area Calculation</h3>
+            <div class=" border-2 text-xs p-4 border-gray-400 rounded-md grid-cols-1">
+                <h3 class="text-xl font-bold text-center mb-8">Area Calculation</h3>
+                <ul id="ul-container">
+                </ul>
             </div>
         </div>
         <script src="./scripts/script.js"></script>
